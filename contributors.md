@@ -18,6 +18,7 @@
 | Rushal verma         |         Rushalverma | IIITA                                                     |      IIT2024045 |         1 |
 | Satwik Santosh       |        DeadlySatwik | IIITA                                                     |      IIT2024084 |         1 |
 | Aditya Shirsatrao    | adityashirsatrao007 | N. K. Orchid College Of Engineering & Technology, Solapur |  23062231995027 |         1 |
+| Aditya Shirsatrao    | adityashirsatrao007 | N. K. Orchid College Of Engineering & Technology, Solapur |  23062231995027 |        29 |
 
 <!-- ADD ABOVE THIS-->
 <!--example |P.Diddy | KoveLids |Reyansh College| IIT2024069| 0|>
