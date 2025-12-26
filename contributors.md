@@ -17,7 +17,7 @@
 | Ishan Raj Singh      |       ishanrajsingh | Amity, Noida                                              |     A2305225427 |         1 |
 | Rushal verma         |         Rushalverma | IIITA                                                     |      IIT2024045 |         1 |
 | Satwik Santosh       |        DeadlySatwik | IIITA                                                     |      IIT2024084 |         1 |
-| Aditya Shirsatrao    | adityashirsatrao007 | N. K. Orchid College Of Engineering & Technology, Solapur |  23062231995027 |         1 |
+| Sudhanshu            |        sahsudhanshu | IIITA                                                     |      IIT2024081 |         1 |
 | Aditya Shirsatrao    | adityashirsatrao007 | N. K. Orchid College Of Engineering & Technology, Solapur |  23062231995027 |        29 |
 
 <!-- ADD ABOVE THIS-->

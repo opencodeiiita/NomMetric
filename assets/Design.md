@@ -5,10 +5,20 @@ It serves as a reference for accepted visual concepts that may later be integrat
 
 ---
 
-## ISSUE #1: App Identity (Logo + Splash Screen)
+## ISSUE #2: App Identity (Logo + Splash Screen)
 
 ### Scope
 Design the **NomMetric logo and splash screen** that define the visual identity of the application.
+
+### Accepted Submissions
+(Shortlisted designs merged from competitive PRs)
+
+- _No submissions shortlisted yet_
+
+## Issue 3- Authentication UI (Login & Register Screens)
+
+### Scope
+ design the **Login and Register** screens for the app.
 
 ### Accepted Submissions
 (Shortlisted designs merged from competitive PRs)
