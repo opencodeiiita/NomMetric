@@ -20,6 +20,7 @@
 | Sudhanshu | sahsudhanshu | IIITA | IIT2024081 | 1 |
 |Vishva Modh | ViMo018 | IIITA | IEC2024060 | 1|
 |Mohan Kumar | aricthecoder | IIITA | IIT2024172 | 1|
+|Adarsh Yadav |adrsh2808-creator | IIITA |IEC2025109 | 1 |
 | Yuvaraj Ragothaman | LevelSilence | IIITA | IEC2024051 | 1 |
 | Naman Pal | Naman2251 | IIITA | IIT2025019 | 1 |
 <!-- ADD ABOVE THIS-->
