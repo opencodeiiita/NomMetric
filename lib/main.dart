@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nommetric/screens/login_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -33,15 +34,7 @@ class NomMetricApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.blue,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'NomMetric: Mess Management System\nProject setup successful!',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18),
-          ),
-        ),
-      ),
+      home: LoginScreen(),
     );
   }
 }
