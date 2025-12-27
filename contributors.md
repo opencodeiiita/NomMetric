@@ -1,4 +1,4 @@
-| Name | Github-ID | College name | Roll no. | Issue no. |
+| Riya Ghoshi | riya-ctrl376 | IIITA | IIT2025084 | 1 |
 |:-----|--------:|---------|-------:|------:|
 | Jatin | thenix09 | IIITA | IIT2025101 | 1 |
 | Anurag| Anurag-Bansode| IIITT | 242101|1|  
