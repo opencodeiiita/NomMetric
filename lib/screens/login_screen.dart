@@ -78,32 +78,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Checkbox(value: true, onChanged: (value) {}),
-                        Text(
-                          "Remember Me",
-                          style: TextStyle(color: Color(0xff000C14)),
-                        ),
-                      ],
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Forgot Password?",
-                        style: TextStyle(
-                          color: Color.fromRGBO(10, 142, 217, 60),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 16.0),
+                SizedBox(height: 32.0),
                 ElevatedButton(
                   onPressed: () {
                     // Go to home placeholder
