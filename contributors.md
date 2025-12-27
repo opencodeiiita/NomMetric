@@ -21,5 +21,6 @@
 |Vishva Modh | ViMo018 | IIITA | IEC2024060 | 1|
 |Mohan Kumar | aricthecoder | IIITA | IIT2024172 | 1|
 | Yuvaraj Ragothaman | LevelSilence | IIITA | IEC2024051 | 1 |
+| Naman Pal | Naman2251 | IIITA | IIT2025019 | 1 |
 <!-- ADD ABOVE THIS-->
 <!--example |P.Diddy | KoveLids |Reyansh College| IIT2024069| 0|>
