@@ -71,3 +71,7 @@ It **does not** contain any details regarding visual designs yet.
  **Contributor:** Omdeep Masram
  **Design Link:** https://www.figma.com/design/fqaRKKB9JuYHxFqjn04uHf/Untitled?node-id=0-1&t=AWOHdXknzkvxDJPv-1
  **Notes:** simple design for login and register screen NO AIs USED!
+
+ - **Contributor:** Sujal kshatri 
+- **Design Link:** https://www.figma.com/design/KMzlHORQkdqIVRHVEJiBki/Cupid-Arrow-Dating-App--iOS-Android-UI-UX--Community-?node-id=0-1&t=pujp0CyBxGpUqd7v-1
+- **Notes:** The design included login and SignUp screens which is minimal and professional. 
