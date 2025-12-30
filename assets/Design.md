@@ -60,10 +60,6 @@ It **does not** contain any details regarding visual designs yet.
 - **Design Link:** https://www.figma.com/make/1i5d6pfFL7HYHHqwspgGGd/Design-App-Logo-and-Splash-Screen?fullscreen=1 
 - **Notes:** The design is minimal, professional, and perfectly suited for a college mess tracking app
 
-- **Contributor:** Sujal kshatri 
-- **Design Link:** https://www.figma.com/design/MHvNzOcN0nL1l7vn2tVscm/Cupid-Arrow-Dating-App--iOS-Android-UI-UX--Community-?node-id=0-1&t=SoXFZG9JW4jyBY6m-1 
-- **Notes:** The design included logo and splash screen which is minimal and professional. 
-
 - **Contributor:** Siddhant Shekhar
 - **Design Link:** https://www.figma.com/design/udeUbTALeSmwtNTNn82oR3/Untitled?node-id=0-1&t=vPxriFgaqxoZef28-1
 - **Notes:** Clean and modern authentication UI designed for campus users, with consistent Login and Register screens, clear input hierarchy, and simple navigation flow.
@@ -72,6 +68,14 @@ It **does not** contain any details regarding visual designs yet.
  **Design Link:** https://www.figma.com/design/fqaRKKB9JuYHxFqjn04uHf/Untitled?node-id=0-1&t=AWOHdXknzkvxDJPv-1
  **Notes:** simple design for login and register screen NO AIs USED!
 
- - **Contributor:** Sujal kshatri 
+ - **Contributor:** Sujal kshatri (logo and splash screen)
 - **Design Link:** https://www.figma.com/design/KMzlHORQkdqIVRHVEJiBki/Cupid-Arrow-Dating-App--iOS-Android-UI-UX--Community-?node-id=0-1&t=pujp0CyBxGpUqd7v-1
 - **Notes:** The design included login and SignUp screens which is minimal and professional. 
+- 
+**Contributor:** Sujal kshatri (login and signup)
+**Design Link:** https://www.figma.com/design/MHvNzOcN0nL1l7vn2tVscm/Cupid-Arrow-Dating-App--iOS-Android-UI-UX--Community-?node-id=0-1&t=SoXFZG9JW4jyBY6m-1 
+**Notes:** The design included logo and splash screen which is minimal and professional, no AI used. 
+
+ **Contributor:** Sanchita Agte
+ **Design Link:** https://www.figma.com/design/hkttHtqGNK3SHknPOnfPck/Untitled?node-id=0-1&t=0yj5slRxGifJy0cS-1 
+ **Notes:** login and register screens, placeholder for name of app
