@@ -1,9 +1,20 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nommetric/screens/login_screen.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +64,7 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 15.0),
                 // Email TextField
                 TextField(
+                  controller: emailController,
                   decoration: InputDecoration(
                     labelText: "Enter Your Email / Roll no.",
                     hintText: "example@gmail.com",
@@ -63,6 +75,7 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 15.0),
                 // Password TextField
                 TextField(
+                  controller: passwordController,
                   decoration: InputDecoration(
                     labelText: "Enter Your Password",
                     suffix: Icon(CupertinoIcons.eye_solid),
@@ -74,6 +87,7 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 15.0),
                 // Confirm Password TextField
                 TextField(
+                  controller: confirmPasswordController,
                   decoration: InputDecoration(
                     labelText: "Confirm Password",
                     suffix: Icon(CupertinoIcons.eye_solid),
@@ -85,9 +99,28 @@ class RegisterScreen extends StatelessWidget {
                 SizedBox(height: 20.0),
                 // Sign Up Button
                 ElevatedButton(
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => HomePage()));
+                  onPressed: () async{
+                    if(passwordController.text != confirmPasswordController.text){
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text("Passwords do not match")),
+                      );
+                      return;
+                    }
+                    
+                    try {
+                      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                        email: emailController.text.trim(),
+                        password: passwordController.text.trim()
+                      );
+                      Navigator.pushReplacement(
+                        context, 
+                        MaterialPageRoute(builder:  (context) => LoginScreen())
+                      );
+                    } catch (e) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text(e.toString())),
+                      );
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,

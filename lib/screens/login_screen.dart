@@ -1,9 +1,20 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nommetric/home.dart';
 import 'package:nommetric/screens/register_screen.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +58,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0),
                     TextField(
+                      controller: emailController,
                       decoration: InputDecoration(
                         hintText: "example@gmail.com",
                         hintStyle: TextStyle(fontWeight: FontWeight.w400),
@@ -66,6 +78,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8.0),
                     TextField(
+                      controller: passwordController,
                       decoration: InputDecoration(
                         hintText: "Enter your password",
                         hintStyle: TextStyle(fontWeight: FontWeight.w400),
@@ -80,12 +93,22 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 32.0),
                 ElevatedButton(
-                  onPressed: () {
-                    // Go to home placeholder
-                    Navigator.push(
-                      context, 
-                      MaterialPageRoute(builder:  (context) => Placeholder())
-                    );
+                  onPressed: () async{
+                    try {
+                      await FirebaseAuth.instance.signInWithEmailAndPassword(
+                        email: emailController.text.trim(),
+                        password: passwordController.text.trim(),
+                      );
+
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (_) => Home()),
+                      );
+                    } catch (e) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text("Invalid credentials")),
+                      );
+                    }
                   },
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
