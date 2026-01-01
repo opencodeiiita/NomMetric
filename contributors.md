@@ -34,7 +34,7 @@
 | Chithra R              |          Chithra582 | CIT            |         24CS016 |         1 |
 | Deepali Kumari         | deepali-kumari-iitp | IIT Patna      |      IITP002556 |         1 |
 | sujal kshatri          |             suzzzal | NITRR          |          241096 |         1 |
-| Prashant kumar dwivedi |     dwivediprashant | LNCT           |   01013AL231146 |         1 |
+| Prashant kumar dwivedi |     dwivediprashant | LNCT           |    0103AL231146 |         1 |
 
 <!-- ADD ABOVE THIS-->
 <!--example |P.Diddy | KoveLids |Reyansh College| IIT2024069| 0|>
