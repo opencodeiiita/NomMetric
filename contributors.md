@@ -1,39 +1,40 @@
+| Name                   |           Github-ID | College name   |        Roll no. | Issue no. |
+| :--------------------- | ------------------: | -------------- | --------------: | --------: |
+| Jatin                  |            thenix09 | IIITA          |      IIT2025101 |         1 |
+| Anurag                 |      Anurag-Bansode | IIITT          |          242101 |         1 |
+| Harshvardhan           |       HARSH4885-svg | IIITA          |      IIT2025177 |         1 |
+| Aaditya Maurya         |     aadityamaurya31 | IIITA          |      IIT2025057 |         1 |
+| Mani kanta             |            MANI8148 | IIITA          |      IIT2024131 |         1 |
+| Omdeep                 |          omicoded19 | IIITA          |      IEC2024059 |         1 |
+| Varad Singhal          |        VaradSinghal | SRMIST         | RA2411003011798 |         1 |
+| Jatin                  |           Jatin-980 | IIITA          |      IIT2025080 |         1 |
+| Sayed Al Amaan Zaidi   |           amaan1114 | RU             |      2501010416 |         1 |
+| Khushi                 |        khushishorey | IIITA          |      IIT2024244 |         1 |
+| Manisha                |    chanchukatariya5 | IIITA          |      IIT2025275 |         1 |
+| Hasan Ravda            |          hasanravda | DDU,Nadiad     |      24CEUOF910 |         1 |
+| Ronak Goyal            |         ronakgoyal1 | IIITA          |      IEC2025009 |         1 |
+| Kushagra Sahu          |     KushagraSahu-01 | IIITA          |      IIT2025069 |         1 |
+| Ishan Raj Singh        |       ishanrajsingh | Amity, Noida   |     A2305225427 |         1 |
+| Rushal verma           |         Rushalverma | IIITA          |      IIT2024045 |         1 |
+| Satwik Santosh         |        DeadlySatwik | IIITA          |      IIT2024084 |         1 |
+| Sudhanshu              |        sahsudhanshu | IIITA          |      IIT2024081 |         1 |
+| Vishva Modh            |             ViMo018 | IIITA          |      IEC2024060 |         1 |
+| Mohan Kumar            |        aricthecoder | IIITA          |      IIT2024172 |         1 |
+| Vinay Mohan            |           vinay2047 | IIITA          |      IIT2024194 |         1 |
+| Adarsh Yadav           |   adrsh2808-creator | IIITA          |      IEC2025109 |         1 |
+| Yuvaraj Ragothaman     |        LevelSilence | IIITA          |      IEC2024051 |         1 |
+| Naman Pal              |           Naman2251 | IIITA          |      IIT2025019 |         1 |
+| Himansh Arora          |          Humanshere | IIITA          |      IIB2024025 |         1 |
+| Ashutosh kesarwani     |        Lucifer-0612 | HIT HALDIA     |     10300124056 |         1 |
+| Apoorv Mittal          |           Apoorv012 | JIIT Noida     |        23103331 |         1 |
+| Amogh S.               |           MogaS811. | IIIT A.        |      IIT2025290 |         1 |
+| Dharaneesh S L         |        Dharaneeshsl | PSGCT          |          24Z218 |         1 |
+| Krishna Sikheirya      |       Krishna200608 | IIIT Allahabad |      IIT2023139 |         1 |
+| Sanchita Agte          |             san-dae | IIITA          |      IIT2024159 |         1 |
+| Chithra R              |          Chithra582 | CIT            |         24CS016 |         1 |
+| Deepali Kumari         | deepali-kumari-iitp | IIT Patna      |      IITP002556 |         1 |
+| sujal kshatri          |             suzzzal | NITRR          |          241096 |         1 |
+| Prashant kumar dwivedi |     dwivediprashant | LNCT           |    0103AL231146 |         1 |
 
-| Name | Github-ID | College name | Roll no. | Issue no. |
-|:-----|--------:|---------|-------:|------:|
-| Jatin | thenix09 | IIITA | IIT2025101 | 1 |
-| Anurag| Anurag-Bansode| IIITT | 242101|1|  
-| Harshvardhan | HARSH4885-svg | IIITA | IIT2025177 | 1 |
-| Aaditya Maurya | aadityamaurya31 | IIITA | IIT2025057 | 1 |
-|Mani kanta|MANI8148|IIITA|IIT2024131|1|
-| Omdeep | omicoded19 | IIITA | IEC2024059 | 1 |
-| Varad Singhal | VaradSinghal | SRMIST | RA2411003011798 | 1 |
-| Jatin | Jatin-980 | IIITA | IIT2025080 | 1 |
-| Sayed Al Amaan Zaidi| amaan1114 | RU | 2501010416 | 1 |
-| Khushi | khushishorey | IIITA | IIT2024244| 1 |
-| Manisha | chanchukatariya5 | IIITA | IIT2025275 | 1 |
-| Hasan Ravda | hasanravda | DDU,Nadiad | 24CEUOF910 | 1 |
-| Ronak Goyal | ronakgoyal1 | IIITA | IEC2025009 | 1 |
-| Kushagra Sahu | KushagraSahu-01|IIITA|IIT2025069|1|
-| Ishan Raj Singh | ishanrajsingh | Amity, Noida | A2305225427 | 1 |
-|Rushal verma |Rushalverma   | IIITA   | IIT2024045     | 1 |
-| Satwik Santosh | DeadlySatwik | IIITA | IIT2024084 | 1 |
-| Sudhanshu | sahsudhanshu | IIITA | IIT2024081 | 1 |
-|Vishva Modh | ViMo018 | IIITA | IEC2024060 | 1|
-|Mohan Kumar | aricthecoder | IIITA | IIT2024172 | 1|
-|Vinay Mohan | vinay2047 | IIITA | IIT2024194    |1|
-|Adarsh Yadav |adrsh2808-creator | IIITA |IEC2025109 | 1 |
-| Yuvaraj Ragothaman | LevelSilence | IIITA | IEC2024051 | 1 |
-| Naman Pal | Naman2251 | IIITA | IIT2025019 | 1 |
-| Himansh Arora | Humanshere | IIITA | IIB2024025 | 1 |
-|Ashutosh kesarwani | Lucifer-0612 | HIT HALDIA | 10300124056 | 1 |
-| Apoorv Mittal | Apoorv012 | JIIT Noida | 23103331 | 1 |
-| Amogh S.      | MogaS811. | IIIT A.    | IIT2025290 | 1 |
-| Dharaneesh S L | Dharaneeshsl | PSGCT | 24Z218 | 1 |
-| Krishna Sikheirya | Krishna200608 | IIIT Allahabad | IIT2023139 | 1 |
-| Sanchita Agte | san-dae | IIITA | IIT2024159 | 1 |
-| Chithra R | Chithra582 | CIT | 24CS016 | 1 |
-| Deepali Kumari | deepali-kumari-iitp | IIT Patna | IITP002556 | 1 |
-| sujal kshatri| suzzzal | NITRR | 241096 |1|
 <!-- ADD ABOVE THIS-->
 <!--example |P.Diddy | KoveLids |Reyansh College| IIT2024069| 0|>
