@@ -16,7 +16,7 @@ Design the **NomMetric logo and splash screen** that define the visual identity 
 - _No submissions shortlisted yet_
 
 ## Issue 3- Authentication UI (Login & Register Screens)
-
+Contributor: Pranav Khandelwal Design Link: https://www.figma.com/design/3gYIdNaU8w62uQDps6vyRG/NomMetric-%E2%80%94-Auth-UI-Design-%E2%80%94-Pranav?node-id=0-1&t=lxwkErjKIovXqTq1-1 Notes: (optional short description)
 ### Scope
  design the **Login and Register** screens for the app.
 
