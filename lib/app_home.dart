@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nommetric/screens/homeScreen_Krishna.dart';
-import 'package:nommetric/screens/profileScreen_Krishna.dart';
+import 'package:nommetric/screens/profileScreen_vibhu.dart';
 
 /// AppHome serves as the main shell for the post-login app flow.
 /// It manages navigation between Home and Profile screens using bottom navigation.
@@ -23,7 +23,7 @@ class _AppHomeState extends State<AppHome> {
     super.initState();
     _screenMap = {
       0: const HomeScreenKrishna(),
-      2: const ProfileScreenKrishna(),
+      2: const ProfileScreenVibhu(),
     };
   }
 

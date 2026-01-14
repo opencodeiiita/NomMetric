@@ -1,86 +1,129 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../models/user_model.dart';
+import '../services/database_service.dart';
+import 'login_screen.dart';
 
 class ProfileScreenVibhu extends StatelessWidget {
   const ProfileScreenVibhu({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: _AppColors.backgroundGrey,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Stack(
-              alignment: Alignment.bottomCenter,
-              clipBehavior: Clip.none,
+    final User? authUser = FirebaseAuth.instance.currentUser;
+    final DatabaseService dbService = DatabaseService();
+
+    void handleLogout() async {
+      await FirebaseAuth.instance.signOut();
+      if (context.mounted) {
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => const LoginScreen()),
+          (route) => false,
+        );
+      }
+    }
+
+    if (authUser == null) {
+      return const Scaffold(body: Center(child: Text("No User Logged In")));
+    }
+
+    return StreamBuilder<UserModel>(
+      stream: dbService.getUserData(authUser.uid),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Scaffold(body: Center(child: CircularProgressIndicator()));
+        }
+
+        final userProfile = snapshot.data;
+        
+        final displayName = userProfile?.name ?? authUser.displayName ?? "Student";
+        final displayEmail = userProfile?.email ?? authUser.email ?? "No Email";
+        final displayHostel = userProfile?.hostel ?? "--";
+        final displayRoom = userProfile?.roomNumber ?? "--";
+        final displayRoll = userProfile?.rollNumber ?? "--";
+
+        return Scaffold(
+          backgroundColor: _AppColors.backgroundGrey,
+          body: SingleChildScrollView(
+            child: Column(
               children: [
-                _buildHeaderBackground(),
-                Positioned(bottom: -30, child: _buildStatsRow()),
+                Stack(
+                  alignment: Alignment.bottomCenter,
+                  clipBehavior: Clip.none,
+                  children: [
+                    _buildHeaderBackground(displayName, displayEmail),
+                    Positioned(
+                      bottom: -30, 
+                      child: _buildStatsRow(displayHostel, displayRoom, displayRoll)
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 50),
+
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildSectionLabel(_AppStrings.accountSection),
+                      Container(
+                        decoration: _boxDecoration(),
+                        child: Column(
+                          children: [
+                            _buildListTile(
+                              icon: Icons.person_outline_rounded,
+                              title: _AppStrings.editProfile,
+                              showDivider: true,
+                              onTap: () { /* Add Edit Logic Later */ },
+                            ),
+                            _buildListTile(
+                              icon: Icons.settings_outlined,
+                              title: _AppStrings.settings,
+                              showDivider: false,
+                              onTap: () {},
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      const SizedBox(height: 25),
+                      _buildSectionLabel(_AppStrings.dangerSection),
+
+                      Container(
+                        decoration: _boxDecoration(),
+                        child: ListTile(
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 5,
+                          ),
+                          leading: const Icon(
+                            Icons.logout_rounded,
+                            color: _AppColors.iconRed,
+                          ),
+                          title: const Text(
+                            _AppStrings.logout,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              color: _AppColors.iconRed,
+                            ),
+                          ),
+                          onTap: handleLogout, 
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 50),
               ],
             ),
-
-            const SizedBox(height: 50),
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  _buildSectionLabel(_AppStrings.accountSection),
-                  Container(
-                    decoration: _boxDecoration(),
-                    child: Column(
-                      children: [
-                        _buildListTile(
-                          icon: Icons.person_outline_rounded,
-                          title: _AppStrings.editProfile,
-                          showDivider: true,
-                        ),
-                        _buildListTile(
-                          icon: Icons.settings_outlined,
-                          title: _AppStrings.settings,
-                          showDivider: false,
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 25),
-                  _buildSectionLabel(_AppStrings.dangerSection),
-
-                  Container(
-                    decoration: _boxDecoration(),
-                    child: ListTile(
-                      contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 5,
-                      ),
-                      leading: const Icon(
-                        Icons.logout_rounded,
-                        color: _AppColors.iconRed,
-                      ),
-                      title: const Text(
-                        _AppStrings.logout,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: _AppColors.iconRed,
-                        ),
-                      ),
-                      onTap: () {},
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 50),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 
-  Widget _buildHeaderBackground() {
+  Widget _buildHeaderBackground(String name, String email) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.only(top: 60, bottom: 60),
@@ -115,9 +158,9 @@ class ProfileScreenVibhu extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 15),
-          const Text(
-            _AppStrings.userName,
-            style: TextStyle(
+          Text(
+            name, // Dynamic Name
+            style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Colors.white,
@@ -138,9 +181,9 @@ class ProfileScreenVibhu extends StatelessWidget {
               color: Colors.white.withValues(alpha: 0.25),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: const Text(
-              _AppStrings.userEmail,
-              style: TextStyle(
+            child: Text(
+              email,
+              style: const TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w600,
                 fontSize: 13,
@@ -152,7 +195,7 @@ class ProfileScreenVibhu extends StatelessWidget {
     );
   }
 
-  Widget _buildStatsRow() {
+  Widget _buildStatsRow(String hostel, String room, String roll) {
     return Container(
       width: 320,
       padding: const EdgeInsets.symmetric(vertical: 15),
@@ -170,11 +213,11 @@ class ProfileScreenVibhu extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildStatItem("128", "Meals"),
+          _buildStatItem(hostel, "Hostel"), // Mapped to Hostel
           Container(height: 25, width: 1, color: Colors.grey[300]),
-          _buildStatItem("4.8", "Rating"),
+          _buildStatItem(room, "Room No"), // Mapped to Room
           Container(height: 25, width: 1, color: Colors.grey[300]),
-          _buildStatItem("Active", "Status"),
+          _buildStatItem(roll, "Roll No"), // Mapped to Roll Number
         ],
       ),
     );
@@ -207,6 +250,7 @@ class ProfileScreenVibhu extends StatelessWidget {
     required IconData icon,
     required String title,
     required bool showDivider,
+    required VoidCallback onTap,
   }) {
     return Column(
       children: [
@@ -229,7 +273,7 @@ class ProfileScreenVibhu extends StatelessWidget {
             size: 16,
             color: Colors.grey,
           ),
-          onTap: () {},
+          onTap: onTap,
         ),
         if (showDivider)
           const Divider(
@@ -272,11 +316,8 @@ class ProfileScreenVibhu extends StatelessWidget {
   }
 }
 
-// CONSTANTS (No Hardcoding)
-
+// CONSTANTS (Cleaned up)
 class _AppStrings {
-  static const String userName = "Vibhu Tomer";
-  static const String userEmail = "vibhu@example.com";
   static const String editProfile = "Edit Profile";
   static const String settings = "Settings";
   static const String logout = "Logout";
@@ -289,7 +330,6 @@ class _AppColors {
   static const Color gradientYellow = Color(0xFFFFD200);
   static const Color gradientOrange = Color(0xFFF7971E);
   static const Color gradientPink = Color(0xFFFF0099);
-
   static const Color backgroundGrey = Color(0xFFF5F7FA);
   static const Color textDark = Color(0xFF2D3142);
   static const Color iconDark = Color(0xFF4A5568);
